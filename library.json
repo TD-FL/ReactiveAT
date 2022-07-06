@@ -1,0 +1,24 @@
+{
+    "name": "ReactiveAt",
+    "version": "0.1.0",
+    "description": "Reactive Non Blocking SIM800L Library",
+    "keywords": "sim800l, AT, SIM800L, AT commands",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TD-FL/ReactiveAT.git"
+    },
+    "authors": [
+        {
+            "name": "Domen Jesenovec",
+            "email": "d@td-fl.org",
+            "url": "https://td-fl.org"
+        }
+    ],
+    "license": "APACHE 2.0",
+    "homepage": "https://github.com/TD-FL/ReactiveAT",
+    "dependencies": {
+        "einararnason/ArduinoQueue": "~1.2.5"
+    },
+    "frameworks": "*",
+    "platforms": "*"
+}
