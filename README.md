@@ -12,12 +12,12 @@ Reactive Non Blocking GSM Modem Library for Arduino Framework.
 - SIM800 series
 - SIM900 series
 
-More comeing soon...
+More coming soon...
 
 ## Features
 
-- Send and Reacive SMS
-- Reacive phone calls
+- Send and Receive SMS
+- Receive phone calls
 - Send Raw AT commands
 
 ## Example
