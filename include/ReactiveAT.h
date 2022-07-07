@@ -22,6 +22,7 @@ class ReactiveAT
 {
 private:
     Stream *_stream;
+    bool _hangupOnCall = true;
     ArduinoQueue<ATCommand> *callbackQueue = new ArduinoQueue<ATCommand>(MAX_QUEUE_ELEMS);
     OnCallCallback onCallFunc = nullptr;
     OnSmsCallback onSmsFunc = nullptr;
@@ -47,6 +48,9 @@ public:
 
     bool sendSms(String number, String body);
     void sendSmsAsync(String number, String body, ResultCallback result);
+
+    void hangUpCall();
+    void setHangUpOnCall(bool enabled);
 
     void registerOnSms(OnSmsCallback smsCallback);
     void registerOnCall(OnCallCallback callCallback);

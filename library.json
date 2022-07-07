@@ -1,7 +1,7 @@
 {
     "name": "ReactiveAt",
-    "version": "0.1.0",
-    "description": "Reactive Non Blocking SIM800L Library",
+    "version": "0.1.1",
+    "description": "Reactive Non Blocking GSM Modem Library for Arduino Framework.",
     "keywords": "sim800l, AT, SIM800L, AT commands",
     "repository": {
         "type": "git",

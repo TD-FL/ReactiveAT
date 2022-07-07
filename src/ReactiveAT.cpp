@@ -131,7 +131,11 @@ void ReactiveAT::handleResponse(String response)
             this->onCallFunc(callingNumber);
         }
 
-        this->sendATAsync("CHUP", [](String r) {}); // hang up
+        if (this->_hangupOnCall)
+        {
+            this->hangUpCall();
+        }
+        
     }
     else if (response.indexOf("+CMTI: \"SM\"") > -1) // got sms now prepare read
     {
@@ -205,6 +209,14 @@ void ReactiveAT::sendSmsAsync(String number, String body, ResultCallback resultC
                                                 resultCallback(this->isSuccessful(response));
                                             });
                       });
+}
+
+void ReactiveAT::hangUpCall() {
+    this->sendATAsync("CHUP", [](String r) {}); // hang up
+}
+
+void ReactiveAT::setHangUpOnCall(bool enabled) {
+    this->_hangupOnCall = enabled;
 }
 
 bool ReactiveAT::isSuccessful(String response)
